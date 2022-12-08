@@ -6,12 +6,12 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Badges {
+public class BadgesDto {
 
     @JsonProperty("votes")
     private int votes;
 
     @JsonProperty("attachmentsByType")
-    private AttachmentsByType attachmentsByType;
+    private AttachmentsByTypeDto attachmentsByTypeDto;
 
 }
