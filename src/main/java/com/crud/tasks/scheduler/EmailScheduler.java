@@ -22,11 +22,13 @@ public class EmailScheduler {
    //@Scheduled(fixedDelay = 10000)
     public void sendInformationEmail(){
         long size = taskRepository.count();
+       String text;
+       text = size == 1 ? "Currently in database you got 1 task" : "Currently in database you got: " + size + " tasks";
         simpleEmailService.send(
                 Mail.builder()
                         .mailTo(adminConfig.getAdminMail())
                         .subject(SUBJECT)
-                        .message("Currently in database you got: " + size + " tasks")
+                        .message(text)
                         .build()
         );
     }
