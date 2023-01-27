@@ -5,6 +5,7 @@ import com.crud.tasks.domain.TaskDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class TaskMapper {
@@ -28,7 +29,7 @@ public class TaskMapper {
     public List<TaskDto> mapToTaskDtoList(final List<Task> taskList) {
         return taskList.stream()
                 .map(this::mapToTaskDto)
-                .toList();
+                .collect(Collectors.toList());
     }
 
 }
