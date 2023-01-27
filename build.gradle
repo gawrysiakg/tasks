@@ -27,14 +27,18 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.6'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
 }
 
+//tasks.named('test') {
+//	onlyIf {
+//		project.hasProperty("runtests")
+//	}
+//	doLast {
+//		useJUnitPlatform()
+//	}
 
-tasks.named('test') {
-	onlyIf {
-		project.hasProperty("runtests")
-	}
-	doLast {
+	tasks.named('test') {
 		useJUnitPlatform()
 	}
-}
+
