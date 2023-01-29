@@ -20,14 +20,6 @@ public class TaskController {
     private final DbService service;
     private final TaskMapper taskMapper;
 
-//    replaced by @RequiredArgsConstructor (with final fields)
-//    @Autowired
-//    public TaskController(DbService service, TaskMapper taskMapper) {
-//        this.service = service;
-//        this.taskMapper = taskMapper;
-//    }
-
-
 
     @GetMapping
     public ResponseEntity <List<TaskDto>> getTasks(){
