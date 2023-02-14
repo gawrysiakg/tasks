@@ -13,6 +13,22 @@
 
 <!--/*thymesVar id="one" type="com.crud.tasks.controller.StaticWebPageController"*/-->
 <!--/*thymesVar id="two" type="com.crud.tasks.controller.StaticWebPageController"*/-->
+<!--/*thymesVar id="space" type="com.crud.tasks.controller.StaticWebPageController"*/-->
+<!--/*thymesVar id="multi" type="com.crud.tasks.controller.StaticWebPageController"*/-->
+<!--/*thymesVar id="plus" type="com.crud.tasks.controller.StaticWebPageController"*/-->
+<!--/*thymesVar id="minus" type="com.crud.tasks.controller.StaticWebPageController"*/-->
+<!--/*thymesVar id="equals" type="com.crud.tasks.controller.StaticWebPageController"*/-->
 <span th:text="${one} + ${two}"></span>
+<br>
+<span th:text="${two} + ${space} + ${multi} + ${space} + ${two} + ${space} + ${equals} + ${space}"></span>
+<span th:text="${two} * ${two}"></span>
+<br>
+<span th:text="${two} + ${space} + ${multi} + ${space} + ${two} + ${space} + ${plus} + ${space} + ${two} + ${space} + ${equals} + ${space}"></span>
+<span th:text="${two} * ${two} + ${two}"></span>
+<br>
+<span th:text="${two} + ${space} + ${minus} + ${space} + ${two} + ${space} + ${multi} + ${space} + ${two} + ${space} + ${equals} + ${space}"></span>
+<span th:text="${two} - ${two} * ${two}"></span>
+<br>
+
 </body>
 </html>
