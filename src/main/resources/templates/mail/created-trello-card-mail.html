@@ -86,7 +86,7 @@
       <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
 
         <!-- START CENTERED WHITE CONTAINER -->
-        <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">PREVIEW_MESSAGE</span>
+        <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;" th:text="${preview_message}"></span>
         <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;">
 
           <!-- START MAIN CONTENT AREA -->
@@ -112,7 +112,7 @@
                       </tr>
                       </tbody>
                     </table>
-                    <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">GOODBYE_MESSAGE</p>
+                    <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;"> Have a nice day, goodbye <span th:text="${admin_name}">! </span>,</p>
                   </td>
                 </tr>
               </table>
@@ -127,7 +127,11 @@
           <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
             <tr>
               <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">COMPANY_DETAILS</span>
+                <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">
+                  <span th:text="${company_name}"></span><br>
+                  <span th:text="${company_goal}"></span><br>mail:
+                  <span th:text="${company_email}"></span>, phone: <span th:text="${company_phone}"></span>
+                </span>
               </td>
             </tr>
           </table>
